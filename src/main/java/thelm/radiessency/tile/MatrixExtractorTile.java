@@ -72,7 +72,7 @@ public class MatrixExtractorTile extends BaseTile implements ITickable {
 	}
 
 	public void updateMatrix() {
-		if(!world.isRemote) {
+		if(world != null && !world.isRemote) {
 			matrixOwnerUUID = null;
 			ItemStack stack = itemHandler.getStackInSlot(0);
 			if(stack.getItem() instanceof ISoulStoneItem) {

@@ -18,11 +18,11 @@ public class IrradiationChamberItemHandlerWrapper extends SidedItemHandlerWrappe
 
 	@Override
 	public boolean canInsertItem(int slot, ItemStack stack, EnumFacing direction) {
-		return false;
+		return slot != 2;
 	}
 
 	@Override
 	public boolean canExtractItem(int slot, EnumFacing direction) {
-		return false;
+		return slot == 2;
 	}
 }

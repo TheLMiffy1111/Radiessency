@@ -17,16 +17,12 @@ public class MatrixExtractorItemHandler extends TileItemHandler<MatrixExtractorT
 
 	@Override
 	protected void onContentsChanged(int slot) {
-		if(tile.hasWorld()) {
-			tile.updateMatrix();
-		}
+		tile.updateMatrix();
 		super.onContentsChanged(slot);
 	}
 
 	@Override
 	protected void onLoad() {
-		if(tile.hasWorld()) {
-			tile.updateMatrix();
-		}
+		tile.updateMatrix();
 	}
 }

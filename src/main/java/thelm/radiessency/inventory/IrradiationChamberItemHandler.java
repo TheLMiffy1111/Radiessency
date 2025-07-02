@@ -1,13 +1,27 @@
 package thelm.radiessency.inventory;
 
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.items.IItemHandlerModifiable;
+import thelm.radiessency.api.item.IBindingGemItem;
+import thelm.radiessency.capability.RadiessencyCapabilities;
 import thelm.radiessency.tile.IrradiationChamberTile;
 
 public class IrradiationChamberItemHandler extends TileItemHandler<IrradiationChamberTile> {
 
 	public IrradiationChamberItemHandler(IrradiationChamberTile tile) {
 		super(tile, 4);
+	}
+
+	@Override
+	public boolean isItemValid(int slot, ItemStack stack) {
+		switch(slot) {
+		case 2:
+			return false;
+		case 3:
+			return stack.getItem() instanceof IBindingGemItem || stack.hasCapability(RadiessencyCapabilities.RADIESSENCE, null);
+		}
+		return true;
 	}
 
 	@Override
