@@ -16,7 +16,7 @@
 				"scale": [ 0.375, 0.375, 0.375 ]
 			},
 			"thirdperson_lefthand": {
-				"rotation": [ 75, 45, 0 ],
+				"rotation": [ 75, 225, 0 ],
 				"translation": [ 0, 0.10449, -0.19319 ],
 				"scale": [ 0.375, 0.375, 0.375 ]
 			},
@@ -31,7 +31,7 @@
 				"scale": [ 0.4, 0.4, 0.4 ]
 			},
 			"ground": {
-				"translation": [ 0, 0.0625, 0 ],
+				"translation": [ 0, 0.1875, 0 ],
 				"scale": [ 0.25, 0.25, 0.25 ]
 			},
 			"gui": {

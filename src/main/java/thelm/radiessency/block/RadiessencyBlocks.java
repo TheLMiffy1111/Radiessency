@@ -82,13 +82,13 @@ public class RadiessencyBlocks {
 
 	// Building Blocks
 	public static final Supplier<Block> FORTIFIED_STONE = add(()->new BasicBlock("radiessency:fortified_stone",
-			Material.ROCK, MapColor.STONE, SoundType.STONE).
+			Material.IRON, MapColor.STONE, SoundType.STONE).
 			setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 	public static final Supplier<Block> FORTIFIED_GLASS = add(()->new PartialBlock("radiessency:fortified_glass",
-			Material.GLASS, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.CUTOUT).
+			Material.IRON, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.CUTOUT).
 			setHardness(3F).setLightOpacity(0).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 	public static final Supplier<Block> KENOTITE_GLASS = add(()->new PartialBlock("radiessency:kenotite_glass",
-			Material.GLASS, MapColor.BLACK, SoundType.METAL, BlockRenderLayer.TRANSLUCENT).
+			Material.IRON, MapColor.BLACK, SoundType.GLASS, BlockRenderLayer.TRANSLUCENT).
 			setHardness(8F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Radiessence Generators

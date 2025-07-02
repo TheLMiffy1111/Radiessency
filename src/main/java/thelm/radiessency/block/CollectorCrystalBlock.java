@@ -15,7 +15,7 @@ public abstract class CollectorCrystalBlock extends DoublePartialBlock {
 	public static final AxisAlignedBB AABB = new AxisAlignedBB(0.25, 0, 0.25, 0.75, 1, 0.75);
 
 	public CollectorCrystalBlock(String registryName) {
-		super(registryName, Material.IRON, MapColor.AIR, SoundType.METAL, BlockRenderLayer.TRANSLUCENT);
+		super(registryName, Material.IRON, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.TRANSLUCENT);
 		setHardness(8F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
