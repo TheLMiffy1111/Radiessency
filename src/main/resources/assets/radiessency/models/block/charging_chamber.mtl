@@ -1,0 +1,4 @@
+newmtl MaterialTop
+map_Kd radiessency:block/charging_chamber_top
+newmtl MaterialSide
+map_Kd radiessency:block/radisteel_machine

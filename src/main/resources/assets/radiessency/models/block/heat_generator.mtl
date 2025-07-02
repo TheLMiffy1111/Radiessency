@@ -1,0 +1,4 @@
+newmtl MaterialTop
+map_Kd radiessency:block/heat_generator_top
+newmtl MaterialSide
+map_Kd radiessency:block/heat_generator_side

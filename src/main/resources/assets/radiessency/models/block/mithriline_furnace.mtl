@@ -1,0 +1,4 @@
+newmtl MaterialTop
+map_Kd radiessency:block/mithriline_furnace_top
+newmtl MaterialSide
+map_Kd radiessency:block/mithriline_furnace_side

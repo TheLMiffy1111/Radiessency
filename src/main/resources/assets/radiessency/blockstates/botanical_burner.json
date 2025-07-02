@@ -1,0 +1,16 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "radiessency:botanical_burner.obj",
+		"custom": {
+			"flip-v": true
+		},
+		"textures": {
+			"#burner": "radiessency:block/radisteel_machine"
+		},
+		"transform": "forge:default-block"
+	},
+	"variants": {
+		"normal": [{}]
+	}
+}

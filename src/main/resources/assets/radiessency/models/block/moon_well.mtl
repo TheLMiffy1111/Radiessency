@@ -1,0 +1,6 @@
+newmtl MaterialRod
+map_Kd radiessency:block/moon_well_rod
+newmtl MaterialGlass
+map_Kd radiessency:block/moon_well_glass
+newmtl MaterialSide
+map_Kd radiessency:block/radisteel_machine

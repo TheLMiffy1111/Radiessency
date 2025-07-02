@@ -1,0 +1,6 @@
+newmtl MaterialTop
+map_Kd radiessency:block/irradiation_chamber_top
+newmtl MaterialBottom
+map_Kd radiessency:block/irradiation_chamber_bottom
+newmtl MaterialSide
+map_Kd radiessency:block/irradiation_chamber_side

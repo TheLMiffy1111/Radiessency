@@ -1,0 +1,6 @@
+newmtl MaterialTop
+map_Kd radiessency:block/ender_generator_top
+newmtl MaterialBottom
+map_Kd radiessency:block/radisteel_machine
+newmtl MaterialSide
+map_Kd radiessency:block/ender_generator_side

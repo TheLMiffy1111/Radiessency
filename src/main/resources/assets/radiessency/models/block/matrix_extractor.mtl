@@ -1,0 +1,4 @@
+newmtl MaterialTop
+map_Kd radiessency:block/matrix_extractor_top
+newmtl MaterialSide
+map_Kd radiessency:block/matrix_extractor_side

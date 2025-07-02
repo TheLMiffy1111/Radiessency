@@ -1,0 +1,13 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "radiessency:irradiation_chamber.obj",
+		"custom": {
+			"flip-v": true
+		},
+		"transform": "forge:default-block"
+	},
+	"variants": {
+		"normal": [{}]
+	}
+}

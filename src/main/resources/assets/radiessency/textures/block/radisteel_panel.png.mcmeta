@@ -1,0 +1,13 @@
+{
+	"ctm": {
+		"ctm_version": 1,
+		"type": "radiessency_panel",
+		"layer": "SOLID",
+		"textures": [
+			"radiessency:block/radisteel_panel_ctm"
+		],
+        "extra": {
+            "connect_inside": true
+        }
+	}
+}

@@ -1,0 +1,212 @@
+package thelm.radiessency.container;
+
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
+import it.unimi.dsi.fastutil.ints.Int2IntRBTreeMap;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.ClickType;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.IContainerListener;
+import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.ItemStackHandler;
+import thelm.radiessency.container.slot.FalseCopySlot;
+import thelm.radiessency.util.MiscHelper;
+
+public abstract class BaseContainer extends Container {
+
+	public final IItemHandlerModifiable itemHandler;
+	public final InventoryPlayer playerInventory;
+	public final Int2IntMap prevSyncValues = new Int2IntRBTreeMap();
+
+	public BaseContainer(IItemHandlerModifiable itemHandler, InventoryPlayer playerInventory) {
+		this.itemHandler = itemHandler != null ? itemHandler : new ItemStackHandler(0);
+		this.playerInventory = playerInventory;
+	}
+
+	public abstract ITextComponent getDisplayName();
+
+	public abstract int getPlayerInvX();
+
+	public abstract int getPlayerInvY();
+
+	public abstract int getFieldCount();
+
+	public abstract int getField(int id);
+
+	public abstract void setField(int id, int value);
+
+	public void setupPlayerInventory() {
+		int xOffset = getPlayerInvX();
+		int yOffset = getPlayerInvY();
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 9; j++) {
+				addSlotToContainer(new Slot(playerInventory, j+i*9+9, xOffset+j*18, yOffset+i*18));
+			}
+		}
+		for(int i = 0; i < 9; i++) {
+			addSlotToContainer(new Slot(playerInventory, i, xOffset+i*18, yOffset+58));
+		}
+	}
+
+	public int getSizeInventory() {
+		return itemHandler.getSlots();
+	}
+
+	public boolean supportsShiftClick(EntityPlayer player, int slotIndex) {
+		return true;
+	}
+
+	public boolean performMerge(EntityPlayer player, int slotIndex, ItemStack stack) {
+		int invBase = getSizeInventory();
+		int invFull = inventorySlots.size();
+		if(slotIndex < invBase) {
+			return mergeItemStack(stack, invBase, invFull, true);
+		}
+		return mergeItemStack(stack, 0, invBase, false);
+	}
+
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer player, int slotIndex) {
+		if(!supportsShiftClick(player, slotIndex)) {
+			return ItemStack.EMPTY;
+		}
+		ItemStack stack = ItemStack.EMPTY;
+		Slot slot = inventorySlots.get(slotIndex);
+		if(slot != null && slot.getHasStack()) {
+			ItemStack stackInSlot = slot.getStack();
+			stack = stackInSlot.copy();
+			if(!performMerge(player, slotIndex, stackInSlot)) {
+				return ItemStack.EMPTY;
+			}
+			slot.onSlotChange(stackInSlot, stack);
+			if(stackInSlot.getCount() <= 0) {
+				slot.putStack(ItemStack.EMPTY);
+			}
+			else {
+				slot.putStack(stackInSlot);
+			}
+			if(stackInSlot.getCount() == stack.getCount()) {
+				return ItemStack.EMPTY;
+			}
+			slot.onTake(player, stackInSlot);
+		}
+		return stack;
+	}
+
+	@Override
+	protected boolean mergeItemStack(ItemStack stack, int slotMin, int slotMax, boolean ascending) {
+		boolean successful = false;
+		int i = !ascending ? slotMin : slotMax - 1;
+		int iterOrder = !ascending ? 1 : -1;
+		Slot slot;
+		ItemStack existingStack;
+		if(stack.isStackable()) {
+			while(stack.getCount() > 0 && (!ascending && i < slotMax || ascending && i >= slotMin)) {
+				slot = inventorySlots.get(i);
+				if(slot instanceof FalseCopySlot) {
+					i += iterOrder;
+					continue;
+				}
+				existingStack = slot.getStack();
+				if(!existingStack.isEmpty()) {
+					int maxStack = Math.min(stack.getMaxStackSize(), slot.getSlotStackLimit());
+					int rmv = Math.min(maxStack, stack.getCount());
+					if(slot.isItemValid(MiscHelper.INSTANCE.cloneStack(stack, rmv)) && existingStack.getItem().equals(stack.getItem()) && (!stack.getHasSubtypes() || stack.getItemDamage() == existingStack.getItemDamage()) && ItemStack.areItemStackTagsEqual(stack, existingStack)) {
+						int existingSize = existingStack.getCount() + stack.getCount();
+						if(existingSize <= maxStack) {
+							stack.setCount(0);
+							existingStack.setCount(existingSize);
+							slot.putStack(existingStack);
+							successful = true;
+						}
+						else if(existingStack.getCount() < maxStack) {
+							stack.shrink(maxStack - existingStack.getCount());
+							existingStack.setCount(maxStack);
+							slot.putStack(existingStack);
+							successful = true;
+						}
+					}
+				}
+				i += iterOrder;
+			}
+		}
+		if(stack.getCount() > 0) {
+			i = !ascending ? slotMin : slotMax - 1;
+			while(stack.getCount() > 0 && (!ascending && i < slotMax || ascending && i >= slotMin)) {
+				slot = inventorySlots.get(i);
+				if(slot instanceof FalseCopySlot) {
+					i += iterOrder;
+					continue;
+				}
+				existingStack = slot.getStack();
+				if(existingStack.isEmpty()) {
+					int maxStack = Math.min(stack.getMaxStackSize(), slot.getSlotStackLimit());
+					int rmv = Math.min(maxStack, stack.getCount());
+					if(slot.isItemValid(MiscHelper.INSTANCE.cloneStack(stack, rmv))) {
+						existingStack = stack.splitStack(rmv);
+						slot.putStack(existingStack);
+						successful = true;
+					}
+				}
+				i += iterOrder;
+			}
+		}
+		return successful;
+	}
+
+	@Override
+	public ItemStack slotClick(int slotId, int mouseButton, ClickType clickType, EntityPlayer player) {
+		if(slotId >= 0 && !player.inventory.getItemStack().isEmpty()) {
+			Slot slot = inventorySlots.get(slotId);
+			if(slot instanceof FalseCopySlot) {
+				ItemStack toPut = player.inventory.getItemStack().copy();
+				ItemStack stack = slot.getStack().copy();
+				switch(mouseButton) {
+				case 0: {
+					slot.putStack(toPut);
+					break;
+				}
+				case 1: {
+					if(stack.isEmpty()) {
+						toPut.setCount(1);
+						slot.putStack(toPut);
+					}
+					else if(stack.getItem() == toPut.getItem() && stack.getItemDamage() == toPut.getItemDamage() &&
+							ItemStack.areItemStackShareTagsEqual(stack, toPut) && stack.getCount() < stack.getMaxStackSize()) {
+						stack.grow(1);
+						slot.putStack(stack);
+					}
+					break;
+				}
+				}
+				return player.inventory.getItemStack();
+			}
+		}
+		return super.slotClick(slotId, mouseButton, clickType, player);
+	}
+
+	@Override
+	public void detectAndSendChanges() {
+		super.detectAndSendChanges();
+		for(int i = 0; i < getFieldCount(); ++i) {
+			int val = getField(i);
+			if(!prevSyncValues.containsKey(i) || prevSyncValues.get(i) != val) {
+				for(IContainerListener listener : listeners) {
+					listener.sendWindowProperty(this, i, val);
+				}
+				prevSyncValues.put(i, val);
+			}
+		}
+	}
+
+	@SideOnly(Side.CLIENT)
+	@Override
+	public void updateProgressBar(int id, int data) {
+		setField(id, data);
+	}
+}

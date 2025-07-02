@@ -1,0 +1,19 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "radiessency:ray_tower.obj",
+		"custom": {
+			"flip-v": true
+		},
+		"transform": "forge:default-block"
+	},
+	"variants": {
+		"half": {
+			"bottom": {},
+			"top": {
+				"model": "block"
+			}
+		},
+		"normal": [{}]
+	}
+}

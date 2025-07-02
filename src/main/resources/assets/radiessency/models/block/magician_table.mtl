@@ -1,0 +1,4 @@
+newmtl MaterialTop
+map_Kd radiessency:block/magician_table_top
+newmtl MaterialSide
+map_Kd radiessency:block/magician_table_side

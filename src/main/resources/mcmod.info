@@ -1,0 +1,12 @@
+[
+	{
+		"modid": "radiessency",
+		"version": "0@VERSION@",
+		"name": "Radiessency",
+		"description": "A magic-themed technology mod, based on EssentialCraft",
+		"logoFile": "radiessency.logo.png",
+		"authorList": ["TheLMiffy1111"],
+		"credits": "Modbder, the original creator of EssentialCraft",
+		"url": "https://github.com/TheLMiffy1111/Radiessency"
+	}
+]
