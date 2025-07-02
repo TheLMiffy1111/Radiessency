@@ -1,12 +1,12 @@
 {
 	"forge_marker": 1,
 	"defaults": {
-		"model": "radiessency:ray_tower.obj",
+		"model": "radiessency:darkness_obelisk.obj",
 		"custom": {
 			"flip-v": true
 		},
 		"textures": {
-			"particle": "radiessency:block/ray_tower_base"
+			"particle": "radiessency:block/darkness_obelisk"
 		},
 		"transform": "forge:default-block"
 	},

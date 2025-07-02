@@ -10,6 +10,7 @@ tile.radiessency.earth_essence_block.name=Block of Earth Essence
 tile.radiessency.balanced_essence_block.name=Block of Balanced Essence
 tile.radiessency.chaos_essence_block.name=Block of Chaos Essence
 tile.radiessency.stasis_essence_block.name=Block of Stasis Essence
+
 tile.radiessency.radisteel_block.name=Block of Radisteel
 tile.radiessency.magnetized_radisteel_block.name=Block of Magnetized Radisteel
 tile.radiessency.radigold_block.name=Block of Radigold
@@ -19,11 +20,13 @@ tile.radiessency.kenotite_block.name=Block of Kenotite
 tile.radiessency.twinkling_kenotite_block.name=Block of Twinkling Kenotite
 tile.radiessency.ackronite_block.name=Block of Ackronite
 tile.radiessency.mithriline_block.name=Block of Mithriline
+
 tile.radiessency.radisteel_panel.name=Radisteel Panel
 tile.radiessency.sphuzite_panel.name=Sphuzite Panel
 tile.radiessency.allassite_panel.name=Allassite Panel
 tile.radiessency.kenotite_panel.name=Kenotite Panel
 tile.radiessency.ackronite_panel.name=Ackronite Panel
+
 tile.radiessency.fortified_stone.name=Fortified Stone
 tile.radiessency.fortified_glass.name=Fortified Glass
 tile.radiessency.kenotite_glass.name=Kenotite Glass
@@ -35,21 +38,27 @@ tile.radiessency.cold_distiller.name=Cold Distiller
 tile.radiessency.sun_ray_absorber.name=Sun Ray Absorber
 tile.radiessency.moon_well.name=Moon Well
 tile.radiessency.ender_generator.name=Ender Generator
+
 tile.radiessency.pulsatile_collector_crystal.name=Pulsatile Collector Crystal
 tile.radiessency.alterant_collector_crystal.name=Alterant Collector Crystal
 tile.radiessency.void_collector_crystal.name=Void Collector Crystal
 tile.radiessency.demonic_collector_crystal.name=Demonic Collector Crystal
+
 tile.radiessency.ray_tower.name=Ray Tower
+
 tile.radiessency.renec_controller.name=RENEC Controller
 tile.radiessency.renec_injector.name=RENEC Injector
 tile.radiessency.renec_ejector.name=RENEC Ejector
 tile.radiessency.renec_stabilizer.name=RENEC Stabilizer
 tile.radiessency.renec_expander.name=RENEC Expander
 tile.radiessency.renec_inspector.name=RENEC Inspector
+
 tile.radiessency.irradiation_chamber.name=Irradiation Chamber
 tile.radiessency.magician_table.name=Magician Table
 tile.radiessency.mithriline_furnace.name=Mithriline Furnace
+
 tile.radiessency.charging_chamber.name=Charging Chamber
+tile.radiessency.darkness_obelisk.name=Darkness Obelisk
 
 item.radiessency.fire_essence_gem.name=Fire Essence Gem
 item.radiessency.air_essence_gem.name=Air Essence Gem

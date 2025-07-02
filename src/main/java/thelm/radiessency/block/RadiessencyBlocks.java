@@ -91,7 +91,7 @@ public class RadiessencyBlocks {
 			Material.GLASS, MapColor.BLACK, SoundType.METAL, BlockRenderLayer.TRANSLUCENT).
 			setHardness(8F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
-	// Generators
+	// Radiessence Generators
 	public static final Supplier<Block> MATRIX_EXTRACTOR = add(MatrixExtractorBlock::new);
 	public static final Supplier<Block> HEAT_GENERATOR = add(HeatGeneratorBlock::new);
 	public static final Supplier<Block> BOTANICAL_BURNER = add(BotanicalBurnerBlock::new);
@@ -99,6 +99,8 @@ public class RadiessencyBlocks {
 	public static final Supplier<Block> SUN_RAY_ABSORBER = add(SunRayAbsorberBlock::new);
 	public static final Supplier<Block> MOON_WELL = add(MoonWellBlock::new);
 	public static final Supplier<Block> ENDER_GENERATOR = add(EnderGeneratorBlock::new);
+
+	// Enderpulse Generators
 	public static final Supplier<Block> PULSATILE_COLLECTOR_CRYSTAL = add(CollectorCrystalBlock.Pulsatile::new);
 	public static final Supplier<Block> ALTERANT_COLLECTOR_CRYSTAL = add(CollectorCrystalBlock.Alterant::new);
 	public static final Supplier<Block> VOID_COLLECTOR_CRYSTAL = add(CollectorCrystalBlock.Void::new);
@@ -107,7 +109,7 @@ public class RadiessencyBlocks {
 	// Transfer
 	public static final Supplier<Block> RAY_TOWER = add(RayTowerBlock::new);
 
-	// Storage
+	// RENEC
 	public static final Supplier<Block> RENEC_CONTROLLER = add(RENECControllerBlock::new);
 	public static final Supplier<Block> RENEC_INJECTOR = add(RENECInjectorBlock::new);
 	public static final Supplier<Block> RENEC_EJECTOR = add(RENECEjectorBlock::new);
@@ -122,6 +124,7 @@ public class RadiessencyBlocks {
 
 	// Functional
 	public static final Supplier<Block> CHARGING_CHAMBER = add(ChargingChamberBlock::new);
+	public static final Supplier<Block> DARKNESS_OBELISK = add(DarknessObeliskBlock::new);
 
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		BLOCK_SUPPLIERS.stream().map(Supplier::get).filter(Objects::nonNull).forEach(block->{
