@@ -10,6 +10,7 @@ public class RENECControllerBlock extends BasicBlock {
 	public RENECControllerBlock() {
 		super("radiessency:renec_controller", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

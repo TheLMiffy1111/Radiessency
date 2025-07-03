@@ -26,70 +26,110 @@ public class RadiessencyBlocks {
 	public static final List<Item> ITEM_BLOCKS = new ArrayList<>();
 
 	// Essence Gem Blocks
-	public static final Supplier<Block> FIRE_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:fire_essence_block",
-			MapColor.ADOBE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> AIR_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:air_essence_block",
-			MapColor.SILVER).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> WATER_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:water_essence_block",
-			MapColor.BLUE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> EARTH_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:earth_essence_block",
-			MapColor.BROWN).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> BALANCED_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:balanced_essence_block",
-			MapColor.PINK).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> STASIS_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:stasis_essence_block",
-			MapColor.LIGHT_BLUE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> CHAOS_ESSENCE_BLOCK = add(()->new BeaconBaseBlock("radiessency:chaos_essence_block",
-			MapColor.RED).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> FIRE_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:fire_essence_block", MapColor.ADOBE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> AIR_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:air_essence_block", MapColor.SILVER).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> WATER_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:water_essence_block", MapColor.BLUE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> EARTH_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:earth_essence_block", MapColor.BROWN).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> BALANCED_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:balanced_essence_block", MapColor.PINK).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> STASIS_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:stasis_essence_block", MapColor.LIGHT_BLUE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> CHAOS_ESSENCE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:chaos_essence_block", MapColor.RED).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Ingot Blocks
-	public static final Supplier<Block> RADISTEEL_BLOCK = add(()->new BeaconBaseBlock("radiessency:radisteel_block",
-			MapColor.PURPLE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> MAGNETIZED_RADISTEEL_BLOCK = add(()->new BeaconBaseBlock("radiessency:magnetized_radisteel_block",
-			MapColor.PURPLE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> RADIGOLD_BLOCK = add(()->new BeaconBaseBlock("radiessency:radigold_block",
-			MapColor.GOLD).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> SPHUZITE_BLOCK = add(()->new BeaconBaseBlock("radiessency:sphuzite_block",
-			MapColor.GREEN).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> ALLASSITE_BLOCK = add(()->new BeaconBaseBlock("radiessency:allassite_block",
-			MapColor.BLUE).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> KENOTITE_BLOCK = add(()->new BeaconBaseBlock("radiessency:kenotite_block",
-			MapColor.BLACK).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> TWINKLING_KENOTITE_BLOCK = add(()->new BeaconBaseBlock("radiessency:twinkling_kenotite_block",
-			MapColor.SILVER).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> ACKRONITE_BLOCK = add(()->new BeaconBaseBlock("radiessency:ackronite_block",
-			MapColor.RED).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> RADISTEEL_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:radisteel_block", MapColor.PURPLE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> MAGNETIZED_RADISTEEL_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:magnetized_radisteel_block", MapColor.PURPLE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> RADIGOLD_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:radigold_block", MapColor.GOLD).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> SPHUZITE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:sphuzite_block", MapColor.GREEN).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> ALLASSITE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:allassite_block", MapColor.BLUE).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> KENOTITE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:kenotite_block", MapColor.BLACK).
+			setHardness(5F).setResistance(15F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> TWINKLING_KENOTITE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:twinkling_kenotite_block", MapColor.SILVER).
+			setHardness(5F).setResistance(15F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> ACKRONITE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:ackronite_block", MapColor.RED).
+			setHardness(5F).setResistance(20F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Dust Blocks
-	public static final Supplier<Block> MITHRILINE_BLOCK = add(()->new BeaconBaseBlock("radiessency:mithriline_block",
-			MapColor.GREEN).setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> MITHRILINE_BLOCK = add(()->new BeaconBaseBlock(
+			"radiessency:mithriline_block", MapColor.GREEN).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Panels
-	public static final Supplier<Block> RADISTEEL_PANEL = add(()->new BasicBlock("radiessency:radisteel_panel",
-			Material.IRON, MapColor.PURPLE, SoundType.METAL).
-			setHardness(10F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> SPHUZITE_PANEL = add(()->new BasicBlock("radiessency:sphuzite_panel",
-			Material.IRON, MapColor.GREEN, SoundType.METAL).
-			setHardness(10F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> ALLASSITE_PANEL = add(()->new BasicBlock("radiessency:allassite_panel",
-			Material.IRON, MapColor.BLUE, SoundType.METAL).
-			setHardness(10F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> KENOTITE_PANEL = add(()->new BasicBlock("radiessency:kenotite_panel",
-			Material.IRON, MapColor.BLACK, SoundType.METAL).
-			setHardness(10F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> ACKRONITE_PANEL = add(()->new BasicBlock("radiessency:ackronite_panel",
-			Material.IRON, MapColor.RED, SoundType.METAL).
-			setHardness(10F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> RADISTEEL_PANEL = add(()->new BasicBlock(
+			"radiessency:radisteel_panel", Material.IRON, MapColor.PURPLE, SoundType.METAL).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> SPHUZITE_PANEL = add(()->new BasicBlock(
+			"radiessency:sphuzite_panel", Material.IRON, MapColor.GREEN, SoundType.METAL).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> ALLASSITE_PANEL = add(()->new BasicBlock(
+			"radiessency:allassite_panel", Material.IRON, MapColor.BLUE, SoundType.METAL).
+			setHardness(5F).setResistance(10F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> KENOTITE_PANEL = add(()->new BasicBlock(
+			"radiessency:kenotite_panel", Material.IRON, MapColor.BLACK, SoundType.METAL).
+			setHardness(5F).setResistance(15F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> ACKRONITE_PANEL = add(()->new BasicBlock(
+			"radiessency:ackronite_panel", Material.IRON, MapColor.RED, SoundType.METAL).
+			setHardness(5F).setResistance(20F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Building Blocks
-	public static final Supplier<Block> FORTIFIED_STONE = add(()->new BasicBlock("radiessency:fortified_stone",
-			Material.IRON, MapColor.STONE, SoundType.STONE).
-			setHardness(3F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> FORTIFIED_GLASS = add(()->new PartialBlock("radiessency:fortified_glass",
-			Material.IRON, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.CUTOUT).
-			setHardness(3F).setLightOpacity(0).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
-	public static final Supplier<Block> KENOTITE_GLASS = add(()->new PartialBlock("radiessency:kenotite_glass",
-			Material.IRON, MapColor.BLACK, SoundType.GLASS, BlockRenderLayer.TRANSLUCENT).
-			setHardness(8F).setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> FORTIFIED_STONE = add(()->new BasicBlock(
+			"radiessency:fortified_stone", Material.IRON, MapColor.STONE, SoundType.STONE).
+			setHardness(5F).setResistance(15F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> FORTIFIED_GLASS = add(()->new PartialBlock(
+			"radiessency:fortified_glass", Material.IRON, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.CUTOUT).
+			setHardness(5F).setResistance(10F).setLightOpacity(0).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
+	public static final Supplier<Block> KENOTITE_GLASS = add(()->new PartialBlock(
+			"radiessency:kenotite_glass", Material.IRON, MapColor.BLACK, SoundType.GLASS, BlockRenderLayer.TRANSLUCENT).
+			setHardness(5F).setResistance(15F).
+			setCreativeTab(RadiessencyCreativeTabs.BLOCKS));
 
 	// Radiessence Generators
 	public static final Supplier<Block> MATRIX_EXTRACTOR = add(MatrixExtractorBlock::new);

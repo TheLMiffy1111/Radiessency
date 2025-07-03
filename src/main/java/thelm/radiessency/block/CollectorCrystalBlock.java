@@ -16,7 +16,8 @@ public abstract class CollectorCrystalBlock extends DoublePartialBlock {
 
 	public CollectorCrystalBlock(String registryName) {
 		super(registryName, Material.IRON, MapColor.AIR, SoundType.GLASS, BlockRenderLayer.TRANSLUCENT);
-		setHardness(8F);
+		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 

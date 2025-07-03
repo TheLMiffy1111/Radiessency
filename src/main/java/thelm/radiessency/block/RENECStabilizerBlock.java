@@ -10,6 +10,7 @@ public class RENECStabilizerBlock extends BasicBlock {
 	public RENECStabilizerBlock() {
 		super("radiessency:renec_stabilizer", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

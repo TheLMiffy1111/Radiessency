@@ -11,6 +11,7 @@ public class ColdDistillerBlock extends PartialBlock {
 	public ColdDistillerBlock() {
 		super("radiessency:cold_distiller", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

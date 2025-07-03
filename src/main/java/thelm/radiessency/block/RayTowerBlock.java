@@ -27,6 +27,7 @@ public class RayTowerBlock extends DoublePartialBlock implements ITileEntityProv
 	public RayTowerBlock() {
 		super("radiessency:ray_tower", Material.IRON, MapColor.PURPLE, SoundType.METAL, BlockRenderLayer.CUTOUT);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 

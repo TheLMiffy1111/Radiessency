@@ -17,6 +17,7 @@ public class IrradiationChamberBlock extends PartialBlock implements ITileEntity
 	public IrradiationChamberBlock() {
 		super("radiessency:irradiation_chamber", Material.IRON, MapColor.GOLD, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 

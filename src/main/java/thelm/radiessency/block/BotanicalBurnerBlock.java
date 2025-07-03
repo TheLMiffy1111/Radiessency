@@ -15,6 +15,7 @@ public class BotanicalBurnerBlock extends PartialBlock {
 	public BotanicalBurnerBlock() {
 		super("radiessency:botanical_burner", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

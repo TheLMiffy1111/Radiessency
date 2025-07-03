@@ -11,6 +11,7 @@ public class EnderGeneratorBlock extends PartialBlock {
 	public EnderGeneratorBlock() {
 		super("radiessency:ender_generator", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

@@ -11,6 +11,7 @@ public class ChargingChamberBlock extends PartialBlock {
 	public ChargingChamberBlock() {
 		super("radiessency:charging_chamber", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

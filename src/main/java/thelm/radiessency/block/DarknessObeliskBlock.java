@@ -11,6 +11,7 @@ public class DarknessObeliskBlock extends DoublePartialBlock {
 	public DarknessObeliskBlock() {
 		super("radiessency:darkness_obelisk", Material.IRON, MapColor.BLACK, SoundType.METAL, BlockRenderLayer.CUTOUT);
 		setHardness(10F);
+		setResistance(50F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

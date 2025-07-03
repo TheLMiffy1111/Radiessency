@@ -10,6 +10,7 @@ public class RENECInspectorBlock extends BasicBlock {
 	public RENECInspectorBlock() {
 		super("radiessency:renec_inspector", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

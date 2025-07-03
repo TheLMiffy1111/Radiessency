@@ -10,6 +10,7 @@ public class RENECEjectorBlock extends BasicBlock {
 	public RENECEjectorBlock() {
 		super("radiessency:renec_ejector", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

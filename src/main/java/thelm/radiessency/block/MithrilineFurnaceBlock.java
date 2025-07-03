@@ -11,6 +11,7 @@ public class MithrilineFurnaceBlock extends PartialBlock {
 	public MithrilineFurnaceBlock() {
 		super("radiessency:mithriline_furnace", Material.IRON, MapColor.GREEN, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

@@ -11,6 +11,7 @@ public class MoonWellBlock extends PartialBlock {
 	public MoonWellBlock() {
 		super("radiessency:moon_well", Material.IRON, MapColor.PURPLE, SoundType.METAL, BlockRenderLayer.CUTOUT);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

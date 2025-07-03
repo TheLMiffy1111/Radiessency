@@ -22,6 +22,7 @@ public class MatrixExtractorBlock extends PartialBlock implements ITileEntityPro
 	public MatrixExtractorBlock() {
 		super("radiessency:matrix_extractor", Material.IRON, MapColor.STONE, SoundType.METAL);
 		setHardness(10F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 
