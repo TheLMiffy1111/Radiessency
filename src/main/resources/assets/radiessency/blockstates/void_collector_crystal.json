@@ -12,12 +12,12 @@
 		"transform": {
 			"thirdperson_righthand": {
 				"rotation": [ 75, 45, 0 ],
-				"translation": [ 0, 0.10449, -0.19319 ],
+				"translation": [ 0, 0.10772, -0.18111 ],
 				"scale": [ 0.375, 0.375, 0.375 ]
 			},
 			"thirdperson_lefthand": {
 				"rotation": [ 75, 225, 0 ],
-				"translation": [ 0, 0.10449, -0.19319 ],
+				"translation": [ 0, 0.10772, -0.18111 ],
 				"scale": [ 0.375, 0.375, 0.375 ]
 			},
 			"firstperson_righthand": {
