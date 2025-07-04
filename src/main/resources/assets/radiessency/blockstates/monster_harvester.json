@@ -1,0 +1,13 @@
+{
+	"forge_marker": 1,
+	"defaults": {
+		"model": "radiessency:monster_harvester.obj",
+		"custom": {
+			"flip-v": true
+		},
+		"transform": "forge:default-block"
+	},
+	"variants": {
+		"normal": [{}]
+	}
+}

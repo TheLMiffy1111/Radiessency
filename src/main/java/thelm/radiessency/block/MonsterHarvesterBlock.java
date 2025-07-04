@@ -6,12 +6,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.BlockRenderLayer;
 import thelm.radiessency.item.RadiessencyCreativeTabs;
 
-public class DarknessObeliskBlock extends DoublePartialBlock {
+public class MonsterHarvesterBlock extends PartialBlock {
 
-	public DarknessObeliskBlock() {
-		super("radiessency:darkness_obelisk", Material.IRON, MapColor.BLACK, SoundType.METAL);
+	public MonsterHarvesterBlock() {
+		super("radiessency:monster_harvester", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
-		setResistance(50F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }
