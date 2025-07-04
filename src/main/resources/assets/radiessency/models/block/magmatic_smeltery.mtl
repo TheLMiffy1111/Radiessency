@@ -1,0 +1,6 @@
+newmtl MaterialTop
+map_Kd radiessency:block/magmatic_smeltery_top
+newmtl MaterialBottom
+map_Kd radiessency:block/magmatic_smeltery_bottom
+newmtl MaterialSide
+map_Kd radiessency:block/magmatic_smeltery_side

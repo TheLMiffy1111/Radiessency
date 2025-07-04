@@ -161,6 +161,7 @@ public class RadiessencyBlocks {
 	public static final Supplier<Block> IRRADIATION_CHAMBER = add(IrradiationChamberBlock::new);
 	public static final Supplier<Block> MAGICIAN_TABLE = add(MagicianTableBlock::new);
 	public static final Supplier<Block> MITHRILINE_FURNACE = add(MithrilineFurnaceBlock::new);
+	public static final Supplier<Block> MAGMATIC_SMELTERY = add(MagmaticSmelteryBlock::new);
 
 	// Functional
 	public static final Supplier<Block> CHARGING_CHAMBER = add(ChargingChamberBlock::new);
