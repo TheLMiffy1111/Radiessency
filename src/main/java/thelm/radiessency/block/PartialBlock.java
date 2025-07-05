@@ -47,7 +47,7 @@ public class PartialBlock extends BasicBlock {
 	@SideOnly(Side.CLIENT)
 	@Override
 	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
-		if(material == Material.GLASS && world.getBlockState(pos.offset(side)).getBlock() == this) {
+		if(world.getBlockState(pos.offset(side)).getBlock() == this) {
 			return false;
 		}
 		return super.shouldSideBeRendered(state, world, pos, side);

@@ -136,6 +136,7 @@ public class RadiessencyBlocks {
 	public static final Supplier<Block> HEAT_GENERATOR = add(HeatGeneratorBlock::new);
 	public static final Supplier<Block> BOTANICAL_BURNER = add(BotanicalBurnerBlock::new);
 	public static final Supplier<Block> COLD_DISTILLER = add(ColdDistillerBlock::new);
+	public static final Supplier<Block> SOLAR_PRISM = add(SolarPrismBlock::new);
 	public static final Supplier<Block> SUN_RAY_ABSORBER = add(SunRayAbsorberBlock::new);
 	public static final Supplier<Block> MOON_WELL = add(MoonWellBlock::new);
 	public static final Supplier<Block> ENDER_GENERATOR = add(EnderGeneratorBlock::new);

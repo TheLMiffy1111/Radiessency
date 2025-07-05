@@ -1,0 +1,21 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"particle": "radiessency:block/solar_prism",
+		"prism": "radiessency:block/solar_prism"
+	},
+	"elements": [
+		{
+			"from": [ 0, 7, 0 ],
+			"to": [ 16, 9, 16 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 16, 16 ], "texture": "#prism" },
+				"up": { "uv": [ 0, 0, 16, 16 ], "texture": "#prism" },
+				"north": { "uv": [ 0, 7, 16, 9 ], "texture": "#prism", "cullface": "north" },
+				"east": { "uv": [ 7, 0, 9, 16 ], "rotation": 270, "texture": "#prism", "cullface": "east" },
+				"south": { "uv": [ 0, 7, 16, 9 ], "rotation": 180, "texture": "#prism", "cullface": "south" },
+				"west": { "uv": [ 7, 0, 9, 16 ], "rotation": 90, "texture": "#prism", "cullface": "west" }
+			}
+		}
+	]
+}

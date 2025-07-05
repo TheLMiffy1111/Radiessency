@@ -35,6 +35,7 @@ tile.radiessency.matrix_extractor.name=Matrix Extractor
 tile.radiessency.heat_generator.name=Heat Generator
 tile.radiessency.botanical_burner.name=Botanical Burner
 tile.radiessency.cold_distiller.name=Cold Distiller
+tile.radiessency.solar_prism.name=Solar Prism
 tile.radiessency.sun_ray_absorber.name=Sun Ray Absorber
 tile.radiessency.moon_well.name=Moon Well
 tile.radiessency.ender_generator.name=Ender Generator
