@@ -166,6 +166,7 @@ public class RadiessencyBlocks {
 
 	// Functional
 	public static final Supplier<Block> CHARGING_CHAMBER = add(ChargingChamberBlock::new);
+	public static final Supplier<Block> MAGICAL_ENCHANTER = add(MagicalEnchanterBlock::new);
 	public static final Supplier<Block> MONSTER_HARVESTER = add(MonsterHarvesterBlock::new);
 	public static final Supplier<Block> DARKNESS_OBELISK = add(DarknessObeliskBlock::new);
 

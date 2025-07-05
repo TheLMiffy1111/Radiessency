@@ -1,0 +1,6 @@
+newmtl MaterialTop
+map_Kd radiessency:block/magical_enchanter_top
+newmtl MaterialBottom
+map_Kd radiessency:block/radisteel_machine
+newmtl MaterialSide
+map_Kd radiessency:block/magical_enchanter_side

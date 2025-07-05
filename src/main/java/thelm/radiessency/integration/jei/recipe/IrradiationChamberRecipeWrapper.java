@@ -17,7 +17,7 @@ import thelm.radiessency.client.gui.GuiHelper;
 
 public class IrradiationChamberRecipeWrapper implements IRecipeWrapper {
 
-	public static final DecimalFormat BALANCE_FORMAT = new DecimalFormat("0.000");
+	public static final DecimalFormat BALANCE_FORMAT = new DecimalFormat("0.0");
 
 	public final IIrradiationChamberRecipe recipe;
 
