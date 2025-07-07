@@ -48,13 +48,17 @@ public class PartialBlock extends BasicBlock {
 	@Override
 	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 		if(world.getBlockState(pos.offset(side)).getBlock() == this) {
-			return false;
+			return doesSideBlockSelfRendering(world.getBlockState(pos.offset(side)), world, pos, side.getOpposite());
 		}
 		return super.shouldSideBeRendered(state, world, pos, side);
 	}
 
 	@Override
-	public boolean doesSideBlockRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing face) {
+	public boolean doesSideBlockRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
 		return false;
+	}
+
+	public boolean doesSideBlockSelfRendering(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
+		return true;
 	}
 }

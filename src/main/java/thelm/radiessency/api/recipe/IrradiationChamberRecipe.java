@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableList;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
 import thelm.radiessency.api.RadiessencyApi;
 
 public class IrradiationChamberRecipe implements IIrradiationChamberRecipe {

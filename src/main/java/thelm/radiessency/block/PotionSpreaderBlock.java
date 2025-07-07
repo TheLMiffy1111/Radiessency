@@ -5,12 +5,12 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import thelm.radiessency.item.RadiessencyCreativeTabs;
 
-public class DarknessObeliskBlock extends DoublePartialBlock {
+public class PotionSpreaderBlock extends PartialBlock {
 
-	public DarknessObeliskBlock() {
-		super("radiessency:darkness_obelisk", Material.IRON, MapColor.BLACK, SoundType.METAL);
+	public PotionSpreaderBlock() {
+		super("radiessency:potion_spreader", Material.IRON, MapColor.PURPLE, SoundType.METAL);
 		setHardness(10F);
-		setResistance(50F);
+		setResistance(25F);
 		setCreativeTab(RadiessencyCreativeTabs.MACHINES);
 	}
 }

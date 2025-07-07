@@ -6,8 +6,8 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 import thelm.radiessency.Radiessency;
-import thelm.radiessency.network.packet.ISelfHandleMessage;
 import thelm.radiessency.network.packet.AddBeamPacket;
+import thelm.radiessency.network.packet.ISelfHandleMessage;
 import thelm.radiessency.network.packet.MatrixInfoRequestPacket;
 import thelm.radiessency.network.packet.MatrixInfoSyncPacket;
 

@@ -4,7 +4,6 @@ import mezz.jei.api.IJeiRuntime;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
-import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -13,7 +12,6 @@ import thelm.radiessency.block.RadiessencyBlocks;
 import thelm.radiessency.client.gui.IrradiationChamberGui;
 import thelm.radiessency.integration.jei.category.IrradiationChamberCategory;
 import thelm.radiessency.integration.jei.recipe.IrradiationChamberRecipeWrapper;
-import thelm.radiessency.integration.jei.renderer.ResourceDrawable;
 import thelm.radiessency.recipe.IrradiationChamberRecipes;
 
 @JEIPlugin

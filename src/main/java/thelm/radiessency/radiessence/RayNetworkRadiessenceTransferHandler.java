@@ -16,7 +16,6 @@ import thelm.radiessency.api.radiessence.IRadiessenceTransferHandler;
 import thelm.radiessency.api.radiessence.NoOpRadiessenceTransfer;
 import thelm.radiessency.api.transfer.DirectionalGlobalPos;
 import thelm.radiessency.api.transfer.GlobalVec;
-import thelm.radiessency.api.transfer.IHasCenterPoint;
 import thelm.radiessency.api.transfer.IRayNetwork;
 import thelm.radiessency.api.transfer.IRayNetworkHandler;
 import thelm.radiessency.capability.RadiessencyCapabilities;

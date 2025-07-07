@@ -7,9 +7,9 @@ import java.util.Map;
 
 import it.unimi.dsi.fastutil.objects.Object2ObjectRBTreeMap;
 import net.minecraft.util.math.BlockPos;
-import thelm.radiessency.api.transfer.IRayNetworkHandler;
 import thelm.radiessency.api.transfer.DirectionalGlobalPos;
 import thelm.radiessency.api.transfer.IRayNetwork;
+import thelm.radiessency.api.transfer.IRayNetworkHandler;
 
 public class RayNetwork implements IRayNetwork {
 

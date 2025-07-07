@@ -14,9 +14,7 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import thelm.radiessency.Radiessency;
 import thelm.radiessency.item.RadiessencyCreativeTabs;
-import thelm.radiessency.network.IGuiProvider;
 import thelm.radiessency.tile.DoubleDelegateTile;
 import thelm.radiessency.tile.RayTowerTile;
 

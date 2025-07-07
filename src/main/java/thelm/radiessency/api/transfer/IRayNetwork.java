@@ -1,7 +1,6 @@
 package thelm.radiessency.api.transfer;
 
 import java.util.Map;
-import java.util.Set;
 
 import net.minecraft.util.math.BlockPos;
 

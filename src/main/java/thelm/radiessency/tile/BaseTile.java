@@ -62,6 +62,10 @@ public abstract class BaseTile extends TileEntity implements IWorldNameable, IGu
 		return 0;
 	}
 
+	public boolean shouldUpdate(int interval) {
+		return (world.getTotalWorldTime() + pos.toLong()) % interval == 0;
+	}
+
 	@Override
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);

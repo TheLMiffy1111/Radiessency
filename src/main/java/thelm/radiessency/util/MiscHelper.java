@@ -8,9 +8,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import it.unimi.dsi.fastutil.ints.IntArrayFIFOQueue;
-import it.unimi.dsi.fastutil.ints.IntArrayList;
 import it.unimi.dsi.fastutil.ints.IntArrays;
-import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.item.ItemStack;
 import thelm.radiessency.api.IMiscHelper;
 

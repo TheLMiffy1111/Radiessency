@@ -2,7 +2,6 @@ package thelm.radiessency.client.renderer;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.List;
 
 import org.lwjgl.opengl.GL11;
 

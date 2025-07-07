@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.common.capabilities.Capability;
@@ -73,7 +72,7 @@ public class IrradiationChamberTile extends BaseTile implements ITickable {
 			updatePowered();
 		}
 		if(!world.isRemote) {
-			if((world.getWorldTime() + pos.toLong()) % transferInterval == 0) {
+			if(shouldUpdate(transferInterval)) {
 				transfer();
 			}
 			if(recipeChanged) {

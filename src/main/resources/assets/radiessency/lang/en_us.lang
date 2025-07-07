@@ -38,6 +38,7 @@ tile.radiessency.cold_distiller.name=Cold Distiller
 tile.radiessency.solar_prism.name=Solar Prism
 tile.radiessency.sun_ray_absorber.name=Sun Ray Absorber
 tile.radiessency.moon_well.name=Moon Well
+tile.radiessency.monster_harvester.name=Monster Harvester
 tile.radiessency.ender_generator.name=Ender Generator
 
 tile.radiessency.pulsatile_collector_crystal.name=Pulsatile Collector Crystal
@@ -61,7 +62,7 @@ tile.radiessency.magmatic_smeltery.name=Magmatic Smeltery
 
 tile.radiessency.charging_chamber.name=Charging Chamber
 tile.radiessency.magical_enchanter.name=Magical Enchanter
-tile.radiessency.monster_harvester.name=Monster Harvester
+tile.radiessency.potion_spreader.name=Potion Spreader
 tile.radiessency.darkness_obelisk.name=Darkness Obelisk
 
 item.radiessency.fire_essence_gem.name=Fire Essence Gem
@@ -155,6 +156,5 @@ misc.radiessency.west=West
 misc.radiessency.east=East
 misc.radiessency.radiessence=%s REU
 misc.radiessency.radiessence_storage=%s / %s REU
-misc.radiessency.balance=Balance: %s
-misc.radiessency.balance_bounds=Balance: %s to %s
-
+misc.radiessency.balance=%s °B
+misc.radiessency.balance_bounds=%s to %s °B

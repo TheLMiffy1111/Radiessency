@@ -5,7 +5,7 @@ import java.util.List;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 
-public interface IIrradiationChamberRecipe {
+public interface MagicianTableRecipe {
 
 	String getKey();
 

@@ -139,6 +139,7 @@ public class RadiessencyBlocks {
 	public static final Supplier<Block> SOLAR_PRISM = add(SolarPrismBlock::new);
 	public static final Supplier<Block> SUN_RAY_ABSORBER = add(SunRayAbsorberBlock::new);
 	public static final Supplier<Block> MOON_WELL = add(MoonWellBlock::new);
+	public static final Supplier<Block> MONSTER_HARVESTER = add(MonsterHarvesterBlock::new);
 	public static final Supplier<Block> ENDER_GENERATOR = add(EnderGeneratorBlock::new);
 
 	// Enderpulse Generators
@@ -167,7 +168,7 @@ public class RadiessencyBlocks {
 	// Functional
 	public static final Supplier<Block> CHARGING_CHAMBER = add(ChargingChamberBlock::new);
 	public static final Supplier<Block> MAGICAL_ENCHANTER = add(MagicalEnchanterBlock::new);
-	public static final Supplier<Block> MONSTER_HARVESTER = add(MonsterHarvesterBlock::new);
+	public static final Supplier<Block> POTION_SPREADER = add(PotionSpreaderBlock::new);
 	public static final Supplier<Block> DARKNESS_OBELISK = add(DarknessObeliskBlock::new);
 
 	public static void registerBlocks(IForgeRegistry<Block> registry) {

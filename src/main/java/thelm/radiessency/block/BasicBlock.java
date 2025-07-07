@@ -74,13 +74,13 @@ public class BasicBlock extends Block implements IBlockModelRegister {
 	}
 
 	@Override
-	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if(player.isSneaking()) {
 			return false;
 		}
 		if(world.getTileEntity(pos) instanceof IGuiProvider) {
 			if(!world.isRemote) {
-				player.openGui(Radiessency.MOD_ID, facing.getIndex(), world, pos.getX(), pos.getY(), pos.getZ());
+				player.openGui(Radiessency.MOD_ID, side.getIndex(), world, pos.getX(), pos.getY(), pos.getZ());
 			}
 			return true;
 		}

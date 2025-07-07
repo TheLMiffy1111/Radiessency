@@ -3,17 +3,9 @@ package thelm.radiessency.client.gui;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
-import org.lwjgl.opengl.GL14;
-
-import com.google.common.primitives.Floats;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.translation.I18n;
 import thelm.radiessency.api.radiessence.IRadiessenceStorage;
 import thelm.radiessency.container.BaseContainer;

@@ -1,0 +1,4 @@
+newmtl MaterialSide
+map_Kd radiessency:block/radisteel_machine
+newmtl MaterialTop
+map_Kd radiessency:block/potion_spreader_top
