@@ -27,7 +27,7 @@ public class Radiessency {
 	@SidedProxy(
 			clientSide = "thelm.radiessency.client.event.ClientLifecycleEventHandler",
 			serverSide = "thelm.radiessency.event.CommonLifecycleEventHandler",
-			modId = Radiessency.MOD_ID)
+			modId = MOD_ID)
 	public static CommonLifecycleEventHandler lifecycleEventHandler;
 
 	@EventHandler

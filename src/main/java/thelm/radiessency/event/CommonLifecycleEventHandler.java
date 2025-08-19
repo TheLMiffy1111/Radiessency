@@ -48,7 +48,7 @@ public class CommonLifecycleEventHandler {
 
 	@SubscribeEvent
 	public void onEntityRegister(RegistryEvent.Register<EntityEntry> event) {
-		IForgeRegistry<EntityEntry> registry = event.getRegistry();
+		//IForgeRegistry<EntityEntry> registry = event.getRegistry();
 	}
 
 	@SubscribeEvent
