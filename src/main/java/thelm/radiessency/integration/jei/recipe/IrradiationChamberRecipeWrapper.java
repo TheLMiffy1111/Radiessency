@@ -44,7 +44,7 @@ public class IrradiationChamberRecipeWrapper implements IRecipeWrapper {
 	public List<String> getTooltipStrings(int mouseX, int mouseY) {
 		if(mouseX >= 3 && mouseX < 15 && mouseY >= 2 && mouseY < 34) {
 			return Arrays.asList(
-					I18n.translateToLocalFormatted("misc.radiessency.radiessence", recipe.getRadiessence()),
+					I18n.translateToLocalFormatted("misc.radiessency.radiessence_amount", recipe.getRadiessence()),
 					I18n.translateToLocalFormatted("misc.radiessency.balance_bounds", BALANCE_FORMAT.format(recipe.getLowerBalance()), BALANCE_FORMAT.format(recipe.getUpperBalance())));
 		}
 		return Collections.emptyList();

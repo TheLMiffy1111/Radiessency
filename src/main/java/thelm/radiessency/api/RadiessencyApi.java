@@ -2,6 +2,7 @@ package thelm.radiessency.api;
 
 import java.util.Set;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -39,6 +40,8 @@ public abstract class RadiessencyApi {
 	public abstract DirectionalGlobalPos getDirectionalGlobalPos(ItemStack stack);
 
 	public abstract TileEntity getBoundTile(World world, ItemStack stack, Predicate<DirectionalGlobalPos> predicate);
+
+	public abstract IRadiessenceTransferHandler getRadiessenceTransferHandler(World world, Supplier<ItemStack> item, Predicate<DirectionalGlobalPos> predicate, Set<BlockPos> rayTowerExcluded, GlobalVec beamTarget);
 
 	public abstract IRadiessenceTransferHandler getRadiessenceTransferHandler(World world, IItemHandler inventory, int slot, Predicate<DirectionalGlobalPos> predicate, Set<BlockPos> rayTowerExcluded, GlobalVec beamTarget);
 

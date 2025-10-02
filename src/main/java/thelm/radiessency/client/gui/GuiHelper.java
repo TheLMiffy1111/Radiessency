@@ -152,7 +152,7 @@ public class GuiHelper {
 
 	public static float getScaledAmount(int amount, int max, int scale) {
 		int guiScale = getGuiScale();
-		return Math.round(MathHelper.clamp(amount, 0, max) * guiScale * scale / (float)max) / (float)guiScale;
+		return Math.round((long)MathHelper.clamp(amount, 0, max) * guiScale * scale / (double)max) / (float)guiScale;
 	}
 
 	public static int getGuiScale() {

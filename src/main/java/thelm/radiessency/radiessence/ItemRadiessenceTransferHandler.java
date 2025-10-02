@@ -1,6 +1,8 @@
 package thelm.radiessency.radiessence;
 
-import net.minecraftforge.items.IItemHandler;
+import java.util.function.Supplier;
+
+import net.minecraft.item.ItemStack;
 import thelm.radiessency.api.radiessence.BalancedAmount;
 import thelm.radiessency.api.radiessence.IRadiessenceStorage;
 import thelm.radiessency.api.radiessence.IRadiessenceTransfer;
@@ -8,16 +10,14 @@ import thelm.radiessency.api.radiessence.IRadiessenceTransferHandler;
 import thelm.radiessency.api.radiessence.NoOpRadiessenceTransfer;
 import thelm.radiessency.capability.RadiessencyCapabilities;
 
-public class InventoryRadiessenceTransferHandler implements IRadiessenceTransferHandler {
+public class ItemRadiessenceTransferHandler implements IRadiessenceTransferHandler {
 
-	protected final IItemHandler inventory;
-	protected final int slot;
+	protected final Supplier<ItemStack> item;
 
 	protected boolean invalid;
 
-	public InventoryRadiessenceTransferHandler(IItemHandler inventory, int slot) {
-		this.inventory = inventory;
-		this.slot = slot;
+	public ItemRadiessenceTransferHandler(Supplier<ItemStack> item) {
+		this.item = item;
 	}
 
 	@Override
@@ -25,7 +25,8 @@ public class InventoryRadiessenceTransferHandler implements IRadiessenceTransfer
 		if(invalid) {
 			return false;
 		}
-		if(!inventory.getStackInSlot(slot).hasCapability(RadiessencyCapabilities.RADIESSENCE, null)) {
+		ItemStack stack = item.get();
+		if(stack == null || stack.isEmpty() || !stack.hasCapability(RadiessencyCapabilities.RADIESSENCE, null)) {
 			invalid = true;
 			return false;
 		}
@@ -37,7 +38,7 @@ public class InventoryRadiessenceTransferHandler implements IRadiessenceTransfer
 		if(!isValid() || maxExtract <= 0) {
 			return NoOpRadiessenceTransfer.INSTANCE;
 		}
-		IRadiessenceStorage storage = inventory.getStackInSlot(slot).getCapability(RadiessencyCapabilities.RADIESSENCE, null);
+		IRadiessenceStorage storage = item.get().getCapability(RadiessencyCapabilities.RADIESSENCE, null);
 		if(!storage.canExtract() || storage.getAmount() <= 0) {
 			return NoOpRadiessenceTransfer.INSTANCE;
 		}

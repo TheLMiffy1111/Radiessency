@@ -7,6 +7,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 import thelm.radiessency.Radiessency;
 import thelm.radiessency.network.packet.AddBeamPacket;
+import thelm.radiessency.network.packet.CreativeRadiessenceSourceModifyPacket;
 import thelm.radiessency.network.packet.ISelfHandleMessage;
 import thelm.radiessency.network.packet.MatrixInfoRequestPacket;
 import thelm.radiessency.network.packet.MatrixInfoSyncPacket;
@@ -21,5 +22,7 @@ public class PacketHandler {
 		INSTANCE.registerMessage(handler, MatrixInfoRequestPacket.class, id++, Side.SERVER);
 		INSTANCE.registerMessage(handler, MatrixInfoSyncPacket.class, id++, Side.CLIENT);
 		INSTANCE.registerMessage(handler, AddBeamPacket.class, id++, Side.CLIENT);
+
+		INSTANCE.registerMessage(handler, CreativeRadiessenceSourceModifyPacket.class, id++, Side.SERVER);
 	}
 }

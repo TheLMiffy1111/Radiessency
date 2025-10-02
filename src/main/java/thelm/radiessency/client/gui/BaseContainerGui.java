@@ -56,7 +56,7 @@ public abstract class BaseContainerGui<C extends BaseContainer> extends GuiConta
 	public void drawRadiessenceTooltip(IRadiessenceStorage storage, int x, int y) {
 		drawHoveringText(Arrays.asList(
 				I18n.translateToLocalFormatted("misc.radiessency.radiessence_storage", storage.getAmount(), storage.getCapacity()),
-				I18n.translateToLocalFormatted("misc.radiessency.balance", BALANCE_FORMAT.format(storage.getBalance()))),
+				I18n.translateToLocalFormatted("misc.radiessency.balance_value", BALANCE_FORMAT.format(storage.getBalance()))),
 				x, y);
 	}
 

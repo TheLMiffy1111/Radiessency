@@ -65,6 +65,9 @@ tile.radiessency.magical_enchanter.name=Magical Enchanter
 tile.radiessency.potion_spreader.name=Potion Spreader
 tile.radiessency.darkness_obelisk.name=Darkness Obelisk
 
+tile.radiessency.creative_radiessence_source.name=Creative Radiessence Source
+tile.radiessency.creative_enderpulse_source.name=Creative Enderpulse Source
+
 item.radiessency.fire_essence_gem.name=Fire Essence Gem
 item.radiessency.air_essence_gem.name=Air Essence Gem
 item.radiessency.water_essence_gem.name=Water Essence Gem
@@ -154,7 +157,10 @@ misc.radiessency.north=North
 misc.radiessency.south=South
 misc.radiessency.west=West
 misc.radiessency.east=East
-misc.radiessency.radiessence=%s REU
+misc.radiessency.amount=Amount
+misc.radiessency.radiessence=Radiessence
+misc.radiessency.radiessence_amount=%s REU
 misc.radiessency.radiessence_storage=%s / %s REU
-misc.radiessency.balance=%s °B
+misc.radiessency.balance=Balance
+misc.radiessency.balance_value=%s °B
 misc.radiessency.balance_bounds=%s to %s °B

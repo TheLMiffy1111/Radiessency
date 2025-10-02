@@ -171,6 +171,10 @@ public class RadiessencyBlocks {
 	public static final Supplier<Block> POTION_SPREADER = add(PotionSpreaderBlock::new);
 	public static final Supplier<Block> DARKNESS_OBELISK = add(DarknessObeliskBlock::new);
 
+	// Creative
+	public static final Supplier<Block> CREATIVE_RADIESSENCE_SOURCE = add(CreativeRadiessenceSourceBlock::new);
+	public static final Supplier<Block> CREATIVE_ENDERPULSE_SOURCE = add(CreativeEnderpulseSourceBlock::new);
+
 	public static void registerBlocks(IForgeRegistry<Block> registry) {
 		BLOCK_SUPPLIERS.stream().map(Supplier::get).filter(Objects::nonNull).forEach(block->{
 			registry.register(block);

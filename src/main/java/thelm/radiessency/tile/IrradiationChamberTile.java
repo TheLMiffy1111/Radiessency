@@ -79,7 +79,7 @@ public class IrradiationChamberTile extends BaseTile implements ITickable {
 				recipeChanged = false;
 				updateRecipe();
 			}
-			if(recipe != null) {
+			if(recipe != null && !powered) {
 				tickProcess();
 			}
 		}
@@ -144,7 +144,7 @@ public class IrradiationChamberTile extends BaseTile implements ITickable {
 		return radiessenceBaseUsage;
 	}
 
-	public void transfer() {
+	protected void transfer() {
 		if(radiessenceStorage.getAmount() < radiessenceStorage.getCapacity()) {
 			if(radiessenceTransferHandler == null || !radiessenceTransferHandler.isValid()) {
 				int dimension = world.provider.getDimension();

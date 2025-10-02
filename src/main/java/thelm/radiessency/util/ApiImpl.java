@@ -2,6 +2,7 @@ package thelm.radiessency.util;
 
 import java.util.Set;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 import javax.vecmath.TexCoord3f;
 import javax.vecmath.Tuple3f;
@@ -32,7 +33,7 @@ import thelm.radiessency.api.transfer.IRayNetworkHandler;
 import thelm.radiessency.capability.RadiessencyCapabilities;
 import thelm.radiessency.client.renderer.BeamHandler;
 import thelm.radiessency.network.packet.AddBeamPacket;
-import thelm.radiessency.radiessence.InventoryRadiessenceTransferHandler;
+import thelm.radiessency.radiessence.ItemRadiessenceTransferHandler;
 import thelm.radiessency.radiessence.RayNetworkRadiessenceTransferHandler;
 import thelm.radiessency.radiessence.TileRadiessenceTransferHandler;
 
@@ -104,13 +105,16 @@ public class ApiImpl extends RadiessencyApi {
 	}
 
 	@Override
-	public IRadiessenceTransferHandler getRadiessenceTransferHandler(World world, IItemHandler inventory, int slot, Predicate<DirectionalGlobalPos> predicate, Set<BlockPos> rayTowerExcluded, GlobalVec beamTarget) {
+	public IRadiessenceTransferHandler getRadiessenceTransferHandler(World world, Supplier<ItemStack> item, Predicate<DirectionalGlobalPos> predicate, Set<BlockPos> rayTowerExcluded, GlobalVec beamTarget) {
 		if(world == null || world.isRemote) {
 			return NoOpRadiessenceTransferHandler.INSTANCE;
 		}
-		ItemStack stack = inventory.getStackInSlot(slot);
+		ItemStack stack = item.get();
+		if(stack == null || stack.isEmpty()) {
+			return NoOpRadiessenceTransferHandler.INSTANCE;
+		}
 		if(stack.hasCapability(radiessenceCapability(), null)) {
-			return new InventoryRadiessenceTransferHandler(inventory, slot);
+			return new ItemRadiessenceTransferHandler(item);
 		}
 		DirectionalGlobalPos globalPos = getDirectionalGlobalPos(stack);
 		if(globalPos == null || !predicate.test(globalPos)) {
@@ -140,6 +144,11 @@ public class ApiImpl extends RadiessencyApi {
 			return new RayNetworkRadiessenceTransferHandler(tile, rayTowerExcluded, beamTarget);
 		}
 		return NoOpRadiessenceTransferHandler.INSTANCE;
+	}
+
+	@Override
+	public IRadiessenceTransferHandler getRadiessenceTransferHandler(World world, IItemHandler inventory, int slot, Predicate<DirectionalGlobalPos> predicate, Set<BlockPos> rayTowerExcluded, GlobalVec beamTarget) {
+		return getRadiessenceTransferHandler(world, ()->inventory.getStackInSlot(slot), predicate, rayTowerExcluded, beamTarget);
 	}
 
 	public static final Tuple3f COLOR_BALANCED = new TexCoord3f(0.54F, 0.15F, 0.73F);

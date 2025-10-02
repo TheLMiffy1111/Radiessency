@@ -6,13 +6,13 @@ import thelm.radiessency.api.radiessence.IRadiessenceTransfer;
 
 public class InventoryRadiessenceTransfer implements IRadiessenceTransfer {
 
-	protected final InventoryRadiessenceTransferHandler handler;
+	protected final ItemRadiessenceTransferHandler handler;
 	protected final IRadiessenceStorage storage;
 	protected final BalancedAmount extracted;
 
 	protected boolean executed;
 
-	public InventoryRadiessenceTransfer(InventoryRadiessenceTransferHandler handler, IRadiessenceStorage storage, BalancedAmount extracted) {
+	public InventoryRadiessenceTransfer(ItemRadiessenceTransferHandler handler, IRadiessenceStorage storage, BalancedAmount extracted) {
 		this.handler = handler;
 		this.storage = storage;
 		this.extracted = extracted;
